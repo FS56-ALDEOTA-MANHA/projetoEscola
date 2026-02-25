@@ -1,4 +1,7 @@
- let cursosPlus = [
+let carrossel = document.getElementById('carrossel')
+let listanavbar = document.getElementById('lista-navbar')
+
+let cursosPlus = [
   {
     id: 1,
     nome: "Crie uma landing page com HTML, CSS e JS",
@@ -42,9 +45,6 @@
   
 ]
 
-let carrossel = document.getElementById('carrossel')
-
-
 for (let i = 0; i < cursosPlus.length; i++) {
   carrossel.innerHTML +=  `
   <div id="slide${cursosPlus[i].id}" class="carousel-item relative w-full flex justify-between">
@@ -68,6 +68,39 @@ for (let i = 0; i < cursosPlus.length; i++) {
 
   
 }
-  
 
- 
+let navegacao = [
+  {
+    nome: "Quem Somos",
+  },
+  {
+    nome: "Nossos cursos",
+    submenu: ["Formações", "Curta e Média Duração"]
+  },
+  {
+    nome: "Pós Graduação",
+    submenu: ["MBA em negócios", "MBA em tecnologia"]
+  },
+]
+
+
+navegacao.map((item)=> (
+  listanavbar.innerHTML += `
+  ${item.submenu ? (
+  <li class="bg-black text-white">  
+    <details>
+        <summary>${item.nome}</summary>
+        <ul class="p-2">
+          <li><a>${item.submenu[0]}</a></li>
+          <li><a>${item.submenu[1]}</a></li>
+        </ul>
+    </details>    
+  </li>
+  ) 
+  : 
+    (<li class="bg-black text-white"><a>${item.nome}</a></li>) }
+
+  `
+))
+
+  
