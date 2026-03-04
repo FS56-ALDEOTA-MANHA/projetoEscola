@@ -1,5 +1,6 @@
 let carrossel = document.getElementById('carrossel')
 let listanavbar = document.getElementById('lista-navbar')
+let listanavbar2 = document.getElementById('lista-navbar2')
 
 let cursosPlus = [
   {
@@ -81,26 +82,33 @@ let navegacao = [
     nome: "Pós Graduação",
     submenu: ["MBA em negócios", "MBA em tecnologia"]
   },
+  {
+    nome: "Entrar",
+    link: "../pages/index.html"
+  },
 ]
 
 
-navegacao.map((item)=> (
-  listanavbar.innerHTML += `
-  ${item.submenu ? (
-  <li class="bg-black text-white">  
-    <details>
-        <summary>${item.nome}</summary>
-        <ul class="p-2">
-          <li><a>${item.submenu[0]}</a></li>
-          <li><a>${item.submenu[1]}</a></li>
-        </ul>
-    </details>    
-  </li>
-  ) 
-  : 
-    (<li class="bg-black text-white"><a>${item.nome}</a></li>) }
+let htmlNav = ""
 
-  `
-))
+navegacao.forEach((obj)=> {
 
-  
+  if (obj.submenu) {
+    htmlNav +=  `<li class="text-white">
+        <details>
+          <summary >${obj.nome}</summary>
+          <ul class="p-2 bg-black w-40 z-1">
+            ${obj.submenu.map((submenu) => (`<li><a>${submenu}</a></li>`)).join("")}
+          </ul>
+        </details>
+      </li>`
+  } else if (obj.nome === "Entrar") {
+    htmlNav += `<li class="text-white"><a class="bg-pink-800 p-2 px-4 ml-3 rounded cursor-pointer" href="${obj.link}">${obj.nome}</a></li>`
+  } else {
+    htmlNav += `<li class="text-white"><a>${obj.nome}</a></li>`
+  }
+})
+
+
+listanavbar.innerHTML = htmlNav
+listanavbar2.innerHTML = htmlNav
