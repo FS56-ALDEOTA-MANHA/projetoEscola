@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academy - Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-200 flex items-center justify-center p-6">
+
+  <!-- Container Principal -->
+  <div class="w-full max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
+
+    <!-- Lado Esquerdo -->
+    <div class="p-10 md:p-16 flex flex-col justify-center">
+
+      <!-- Logo -->
+      <div class="mb-10">
+        <h1 class="text-5xl font-extrabold text-black flex items-center gap-3">
+          <span class="text-pink-700 text-6xl">&gt;</span> academy<span class="text-pink-700">_</span>
+        </h1>
+      </div>
+
+      <h2 class="text-xl font-semibold text-black mb-2">
+        Acesso ao EAD da Digital College
+      </h2>
+
+      <p class="text-gray-600 mb-8">
+        Preencha os seus dados abaixo.
+      </p>
+
+      <!-- Formulário -->
+      <form class="space-y-6">
+
+        <!-- CPF -->
+        <div>
+          <input type="text" placeholder="CPF" class="w-full px-6 py-4 rounded-full bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-700">
+        </div>
+
+        <!-- Senha -->
+        <div class="relative">
+          <input type="password" placeholder="Senha" class="w-full px-6 py-4 rounded-full bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-700">
+          <!-- Ícone olho -->
+          <span class="absolute right-5 top-4 text-pink-700 cursor-pointer">
+            👁
+          </span>
+        </div>
+
+        <!-- Lembrar e Esqueci -->
+        <div class="flex items-center justify-between text-sm">
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" class="w-5 h-5 accent-pink-700">
+            <span class="text-black">Lembrar meu acesso</span>
+          </label>
+
+          <a href="#" class="text-pink-700 hover:underline">
+            Esqueceu a senha?
+          </a>
+        </div>
+
+        <!-- Botão -->
+        <button type="submit" class="w-full bg-pink-700 text-white py-4 rounded-full font-semibold text-lg hover:bg-pink-800 transition duration-300 shadow-lg">
+          Acessar
+        </button>
+
+      </form>
+
+    </div>
+
+    <!-- Lado Direito -->
+    <div class="hidden md:block bg-gradient-to-br from-pink-500 to-pink-700 relative">
+
+      <!-- Marca inferior -->
+      <div class="absolute bottom-6 right-8 text-white text-2xl font-bold opacity-90">
+        &gt; academy_
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

@@ -4,19 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <main>
-    <form>
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email">
+<body class="bg-pink-800 flex items-center justify-center min-h-screen">
 
-      <label for="password">Senha</label>
-      <input type="password" name="password" id="password">
+  <div class="bg-black w-full max-w-md p-8 rounded-2xl shadow-2xl">
 
-      <button type="button" onclick="login()">Entrar</button>
+    <div class="mb-6">
+    <img class="h-20 mx-auto" src="https://digitalcollege.com.br/wp-content/uploads/2022/05/logo-digital.png" alt="logo digital college">
+    </div>
+
+    <form class="space-y-5">
+      <div>
+        <label class="block text-white mb-2">Email</label>
+        <input id="email" type="email" placeholder="Digite seu email" class="w-full px-4 py-2 rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-pink-800" required />
+      </div>
+      <div>
+        <label class="block text-white mb-2">Senha</label>
+        <input id="password" type="password" placeholder="Digite sua senha" class="w-full px-4 py-2 rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-pink-800" required />
+      </div>
+      <button onclick="login()" type="button" class="w-full bg-pink-800 text-white py-2 rounded-lg font-semibold hover:bg-pink-700 transition duration-300">
+        Entrar
+      </button>
+
     </form>
-  </main>
+
+    <p class="text-center text-gray-400 text-sm mt-6">
+      © 2026 - Todos os direitos reservados
+    </p>
+
+  </div>
+
   <script src="../script/index.js"></script>
 </body>
 </html>

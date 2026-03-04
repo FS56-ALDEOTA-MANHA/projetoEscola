@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Projeto Escola</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>Acesso ao sistema</h1>
+
+<body class="bg-black min-h-screen text-white p-8">
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-3xl font-bold mb-2 text-pink-500">
+      Curso Fullstack FS56 - Aldeota - Manhã
+    </h1>
+    <h2 class="text-xl mb-6 border-b border-pink-500 pb-2">
+      Alunos
+    </h2>
+    <div class="bg-zinc-900 shadow-2xl rounded-md overflow-hidden border border-pink-800">
+      <table class="w-full text-left border-collapse">
+        <thead class="bg-pink-800 text-white">
+          <tr>
+            <th class="p-4">ID</th>
+            <th class="p-4">Nome</th>
+            <th class="p-4">Status</th>
+          </tr>
+        </thead>
+        <tbody id="table-body" class="divide-y divide-pink-700">
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="../script/alunos.js"></script>
 </body>
 </html>
